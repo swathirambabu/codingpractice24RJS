@@ -1,22 +1,21 @@
-// Write your JS code here
 import './index.css'
 
 const CryptocurrencyItem = props => {
-  const cryptocurrenciesDetails = props
+  const {cryptocurrencyDetails} = props
   const {
     currencyLogoUrl,
     currencyName,
     usdValue,
     euroValue,
-  } = cryptocurrenciesDetails
+  } = cryptocurrencyDetails
 
   return (
     <li className="cryptocurrency-item">
       <div className="logo-and-title-container">
         <img
+          className="currency-logo"
           src={currencyLogoUrl}
           alt={currencyName}
-          className="currency-logo"
         />
         <p className="currency-name">{currencyName}</p>
       </div>
@@ -27,4 +26,5 @@ const CryptocurrencyItem = props => {
     </li>
   )
 }
+
 export default CryptocurrencyItem
